@@ -1,37 +1,149 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+/* =========================== Global selector ============================ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    padding-top: 10px;
+}
+/* =========================== Smartphones (<= 576px) =========================== */
+@media (max-width: 576px) {
+  nav {
+    width: 100%;
+  }
+  nav > .navBar {
+    max-width: 100%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  nav > .navBar > .navBtnLogin > button {
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: yellow;
+  }
+  nav > .navBar > .navSearch > #search {
+    width: 240px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    background-color: lightgray;
+  }
+  .container > .pictureContent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-gap: 5px;
+  }
+  .container > .pictureContent > .picture {
+    padding: 5px;
+  }
+  .container > .pictureContent > .picture > img {
+    width: 100%;
+    border-radius: 20px;
+  }
 }
 
-@media (min-width: 600px) {
-    nav{
-        width: 100%;
-    }
-    nav > .navBar{
-        max-width: 1140px;
-        height: 60px;
-        margin: auto;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-    }
-    nav > .navBar > .navBtnLogin > button{
-        width: 80px;
-        height: 30px;
-        border: none;
-        border-radius: 15px;
-        background-color: yellow;
-    }
-    nav > .navBar > .navSearch > #btnSearch{
-        width: 500px;
-        height: 50px;
-        border: none;
-        border-radius: 25px;
-        padding-left: 20px;
-        background-color: lightgray;
-    }
+/* =========================== Tablets (≥ 577px and ≤ 1024px) =========================== */
+@media (min-width: 577px) and (max-width: 1024px) {
+  nav {
+    width: 100%;
+  }
+  nav > .navBar {
+    max-width: 768px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+  }
+  nav > .navBar > .navBtnLogin > button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: yellow;
+  }
+  nav > .navBar > .navSearch > #search {
+    width: 350px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    background-color: lightgray;
+  }
+  .container > .pictureContent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  .container > .pictureContent > .picture {
+    padding: 10px;
+  }
+  .container > .pictureContent > .picture > img {
+    width: 100%;
+    transition: 1s;
+    border-radius: 20px;
+  }
+}
+
+/* =========================== Desktops (≥ 1025px) =========================== */
+@media (min-width: 1025px) {
+  nav {
+    width: 100%;
+  }
+  nav > .navBar {
+    max-width: 1140px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+  }
+  nav > .navBar > .navBtnLogin > button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 15px;
+    background-color: yellow;
+  }
+  nav > .navBar > .navSearch > #search {
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    background-color: lightgray;
+  }
+  .container > .pictureContent {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  .container > .pictureContent > .picture {
+    padding: 10px;
+  }
+  .container > .pictureContent > .picture:hover img {
+    transform: scale(1.025);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+  .container > .pictureContent > .picture > img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 1s;
+  }
 }
